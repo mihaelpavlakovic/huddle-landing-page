@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --primary-bg-color: hsl(257, 40%, 49%);
+  --secondary-bg-color: hsl(300, 69%, 71%);
+}
+
+body,
+h1,
+p {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background-image: url("./images/bg-desktop.svg");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--primary-bg-color);
+  padding: 0 5rem;
+}
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar .logo {
+  height: 60%;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.hero .text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+  padding-top: 2rem;
+  padding-right: 2rem;
+}
+
+.hero .text-section h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+
+.hero .text-section p {
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 12rem;
+  border-radius: 5rem;
+  padding: 1rem 0;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: var(--primary-bg-color);
+}
+
+.btn:hover {
+  background-color: var(--secondary-bg-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+.socials {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+}
+
+.socials i {
+  width: 1rem;
+  height: 1rem;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.socials i:hover {
+  color: var(--secondary-bg-color);
+  border: 0.1rem solid var(--secondary-bg-color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-image: url("./images/bg-mobile.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .navbar .logo {
+    height: 40%;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero .mockup {
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .hero .text-section {
+    text-align: center;
+    align-items: center;
+    gap: 1.3rem;
+    padding-top: 1rem;
+    padding-right: 0;
+  }
+
+  .hero .text-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
